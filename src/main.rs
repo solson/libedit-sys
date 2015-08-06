@@ -16,7 +16,7 @@ fn main() {
         let stderr = libc::fdopen(STDERR_FILENO, c_str!("w"));
         let e = el_init(c_str!("libedit-sys"), stdin, stdout, stderr);
 
-        fn prompt(e: *mut EditLine) -> *const libc::c_char {
+        fn prompt(_: *mut EditLine) -> *const libc::c_char {
             c_str!("libedit-sys> ")
         }
 
